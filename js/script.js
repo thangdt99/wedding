@@ -19,6 +19,15 @@
     });
   }
 
+  const today = new Date();
+  $(".mini_calendar").find("tbody td").filter(function () {
+    return $(this).text().trim() === (today.getDay() + 1).toString() &&
+      today.getMonth() + 1 === 3 &&
+      today.getFullYear() === 2026
+   }).html(function () {
+    return `<div id="today">${today.getDay() + 1}</div>`;
+  })
+
   setTimeout(function () {
     var boxHeightOne = $(".invitation-box.calendar-box").parent().height();
     var boxHeightTwo = $(".invitation-box.left").parent().height();
