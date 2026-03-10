@@ -3291,6 +3291,23 @@ img {
     border-radius: 50%;
 }
 
+.invitation-section .calendar-box .mini_calendar #heart{
+	position: relative;
+  font-weight: bold;
+  color: #271d1d;
+  &::before {
+    content: "❤";
+    position: absolute;
+    color: #e5737366;
+    font-size: 34px;
+  }
+
+  &::before {
+    top: -6px;
+    left: 13px;
+  }
+}
+
 @media (max-width: 991px) {
   .invitation-section .invitation-box {
     max-width: 500px;
